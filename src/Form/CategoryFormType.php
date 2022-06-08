@@ -19,7 +19,7 @@ class CategoryFormType extends AbstractType
                 'required' => true,
                 'attr' => [
                     'placeholder' => 'Enter category name',
-                    'class' => 'input payment-type authcode w-full border mt-2',
+                    'class' => '',
                 ],                'constraints' => [
                     new NotBlank(),
                 ],

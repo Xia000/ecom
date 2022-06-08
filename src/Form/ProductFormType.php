@@ -21,7 +21,7 @@ class ProductFormType extends AbstractType
                 'required' => true,
                 'attr' => [
                     'placeholder' => 'Enter product name',
-                    'class' => 'input payment-type authcode w-full border mt-2',
+                    'class' => 'form-control mt-2',
                 ],                'constraints' => [
                     new NotBlank(),
                 ],
@@ -30,7 +30,7 @@ class ProductFormType extends AbstractType
                 'required' => true,
                 'attr' => [
                     'placeholder' => 'Enter price',
-                    'class' => 'input payment-type authcode w-full border mt-2',
+                    'class' => 'form-control mt-2',
                 ],                'constraints' => [
                     new NotBlank(),
                 ],
@@ -39,7 +39,7 @@ class ProductFormType extends AbstractType
                 'required' => true,
                 'attr' => [
                     'placeholder' => 'Enter description',
-                    'class' => 'input payment-type authcode w-full border mt-2 mb-2',
+                    'class' => 'form-control mt-2 mb-2',
                 ],                'constraints' => [
                     new NotBlank(),
                 ],
