@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Category;
+use App\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Response;
@@ -81,6 +82,12 @@ class CategoryController extends AbstractController
 
     public function delete(Category $category,EntityManagerInterface $entityManager)
     {
+       $product = $entityManager->getRepository(Product::class)->findBy(['category' => $category]);
+
+         if(count($product) > 0){
+              return new Response('This category is used in products');
+            }
+
         $entityManager->remove($category);
         $entityManager->flush();
 
