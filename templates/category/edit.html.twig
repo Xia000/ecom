@@ -4,7 +4,24 @@
 <div class = "container">
     <h1 class = "text-center my-4">Eidt category </h1>
 
-    {{ form(category_form) }}
+    {{ form_start(category_form) }}
+                <div class="errors">
+                    {{ form_errors(category_form) }}
+                    <div class = "row">
+                        <div class="col">
+                        {{ form_label(category_form.name) }}
+                        </div>
+
+                        <div>
+                            {{ form_widget(category_form.name) }}
+                        </div>
+
+                        <div>
+                            {{ form_widget(category_form.Submit) }}
+                        </div>
+                    </div>
+
+            {{ form_end(category_form) }}
     
 </div>
 {% endblock %}

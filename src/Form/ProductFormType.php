@@ -22,7 +22,7 @@ class ProductFormType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Enter product name',
                     'class' => 'form-control mt-2',
-                ],                'constraints' => [
+                ],'constraints' => [
                     new NotBlank(),
                 ],
             ])
@@ -31,7 +31,7 @@ class ProductFormType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Enter price',
                     'class' => 'form-control mt-2',
-                ],                'constraints' => [
+                ],'constraints' => [
                     new NotBlank(),
                 ],
             ])

@@ -3,12 +3,65 @@
    
     
     {% block body %}
-    <div class="container">
-        <div class="row">
-           <h2 class="text-center mt-3">Add New Product</h2>
-        {{ form(product_form) }}
-        </div>
-    </div>
+
+    <div class = "container">
+       <h2 class="text-center mt-3">Add New Product</h2>
         
+        {{ form_start(product_form) }}
+            
+            <div class="my-custom-class-for-errors">
+                {{ form_errors(product_form) }}
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    {{ form_label(product_form.name) }}
+                </div>
+                <div>
+                {{ form_widget(product_form.name) }}
+                </div>
+
+                <div class="col">
+                    {{ form_label(product_form.price) }}
+                </div>
+
+                 <div>
+                {{ form_widget(product_form.price) }}
+                </div>
+
+                <div class="col">
+                    {{ form_label(product_form.description) }}
+                </div>
+
+                 <div>
+                {{ form_widget(product_form.description) }}
+                </div>
+
+                <div class="col">
+                    {{ form_label(product_form.category) }}
+                </div>
+
+                 <div>
+                {{ form_widget(product_form.category) }}
+                </div>
+                
+                <div>
+                {{ form_widget(product_form.Submit) }}
+                </div>
+            </div>
+
+        {{ form_end(product_form) }}
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
         
     {% endblock %}
